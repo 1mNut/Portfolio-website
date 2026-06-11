@@ -1,0 +1,74 @@
+html, body {
+  height: 300vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  margin: 0;
+  background: #0f0f12;
+  font-family: sans-serif;
+  color: white;
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.link {
+  fill: none;
+  stroke: #444;
+  stroke-width: 1.5px;
+  pointer-events: none;
+}
+
+.node circle {
+  fill: #2b2bff;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.node circle:hover {
+  fill: #4da6ff;
+}
+
+.node text {
+  font-size: 16px;
+  fill: white;
+  pointer-events: none;
+}
+
+#tooltip {
+  position: fixed;
+  background: rgba(20, 20, 28, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  color: white;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none; 
+}
+
+#tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#tooltip h3 { margin: 0 0 8px 0; font-size: 16px; }
+#tooltip p { margin: 0 0 12px 0; font-size: 14px; color: #aaa; line-height: 1.4; }
+#tooltip a { color: #4da6ff; text-decoration: none; font-weight: bold; }
+#tooltip a:hover { text-decoration: underline; }

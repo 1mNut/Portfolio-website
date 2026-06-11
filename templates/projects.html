@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block title %}My projects{% endblock %}
+{% block links %}
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+{% block menu %}
+{% endblock %}
+
+{% block content %}
+<svg></svg>
+
+<div id="tooltip"></div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{% block title %}Website{% endblock %}</title>
+    {% block links %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+</head>
+
+<body>
+    {% block menu %}
+    <div class="menu"></div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>
